@@ -1,6 +1,7 @@
 import {MascotaEntity} from './mascota.entity';
 import {Injectable} from '@nestjs/common';
 import {Repository, UpdateResult} from 'typeorm';
+import {InjectRepository} from '@nestjs/typeorm';
 
 
 @Injectable()

@@ -1,6 +1,6 @@
 import {Column, Entity, PrimaryGeneratedColumn} from 'typeorm';
 
-export enum estado {
+/*export enum estado {
     fallecida,
     enferma,
     sana,
@@ -11,22 +11,22 @@ export enum tipoMascota{
     canino,
     pez,
     ave
-}
-
+}*/
+@Entity('mascota')
 export class MascotaEntity {
-    @Entity('mascota')
+
     @PrimaryGeneratedColumn()
     id: number;
-    @Column({
+    @Column(/*{
         type:"enum",
         enum:tipoMascota
-    })
+    }*/)
     tipo: string;
-    @Column({
+    @Column(/*{
         type: 'enum',
         enum: estado,
         default:estado.sana
-    })
+    }*/)
     estado: string;
     @Column()
     descripcion: string;
