@@ -6,9 +6,11 @@ import {TypeOrmModule} from '@nestjs/typeorm';
 import {MascotaEntity} from './mascota/mascota.entity';
 import {UsuarioEntity} from './usuario/usuario.entity';
 import {UsuarioModule} from './usuario/usuario.module';
+import {VeterinariaModule} from './veterinaria/veterinaria.module';
+import {VeterinariaEntity} from './veterinaria/veterinaria.entity';
 
 @Module({
-    imports: [MascotaModule, UsuarioModule, TypeOrmModule.forRoot({
+    imports: [MascotaModule, UsuarioModule, VeterinariaModule, TypeOrmModule.forRoot({
         type: 'mysql',
         host: 'localhost',
         port: 32771,
@@ -16,7 +18,7 @@ import {UsuarioModule} from './usuario/usuario.module';
         username: 'israel',
         password: '12345678',
         database: 'uni',
-        entities: [MascotaEntity,UsuarioEntity],
+        entities: [MascotaEntity, UsuarioEntity, VeterinariaEntity],
         synchronize: true,
         dropSchema: true
     })
