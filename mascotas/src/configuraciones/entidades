@@ -1,0 +1,5 @@
+import {MascotaEntity} from '../mascota/mascota.entity';
+
+export const ARREGLO_ENTITIES=[
+    MascotaEntity
+]

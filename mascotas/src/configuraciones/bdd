@@ -1,0 +1,13 @@
+export const CONFIGURACIONES = {
+    bdd: {
+        host: 'localhost',
+        port: 32771,
+        name: 'default',
+        username: 'israel',
+        password: '12345678',
+        database: 'uni',
+        synchronize: true,
+        dropSchema: true,
+    },
+    crearDatosPrueba: true,
+};
